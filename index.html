@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden Moments</title>
+  <style>
+    :root{
+      --gold:#f4b400; --gold-dark:#d79c00; --bg:#fffaf2; --text:#2b2b2b;
+      --card:#ffffff; --muted:#666; --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+    header{background:linear-gradient(135deg,var(--gold),#ffd56a);padding:54px 18px 34px;text-align:center;color:#fff;}
+    header h1{margin:0 0 8px;font-size:40px;}
+    header p{margin:0;font-size:18px;opacity:.95;}
+    nav{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+    nav .wrap{max-width:1050px;margin:auto;padding:12px 16px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    nav a{text-decoration:none;color:var(--gold-dark);font-weight:700;padding:10px 14px;border-radius:999px;transition:.2s;}
+    nav a:hover{background:rgba(244,180,0,.12);}
+    .container{max-width:1050px;margin:auto;padding:26px 16px 60px;}
+    .hero{background:rgba(255,255,255,.7);border:1px solid rgba(0,0,0,.04);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:18px;margin-top:-18px;}
+    .hero p{margin:0;color:var(--muted);}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+    @media (max-width:920px){.grid{grid-template-columns:1fr;}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;
+      border:1px solid rgba(0,0,0,.04);transition:.15s;cursor:pointer;}
+    .card:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(0,0,0,.10);}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,180,0,.14);
+      color:var(--gold-dark);font-weight:800;padding:8px 12px;border-radius:999px;font-size:14px;}
+    .card h3{margin:12px 0 8px;font-size:22px;}
+    .card p{margin:0 0 14px;color:var(--muted);}
+    .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:800;padding:10px 14px;border-radius:12px;text-decoration:none;}
+    .btn:hover{background:var(--gold-dark);}
+    section{margin-top:24px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid rgba(0,0,0,.04);}
+    footer{margin-top:24px;text-align:center;color:#fff;padding:18px 14px;background:var(--gold);}
+    .small{opacity:.95;font-size:14px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Golden Moments</h1>
+  <p>Εκεί όπου κάθε στιγμή γίνεται αξέχαστη ✨</p>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html">Αρχική</a>
+    <a href="party.html">Πάρτυ</a>
+    <a href="activities.html">Δραστηριότητες</a>
+    <a href="study.html">Μελέτη</a>
+    <a href="#contact">Επικοινωνία</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h2 style="margin:0 0 6px;">Οι Υπηρεσίες μας</h2>
+    <p>Πάτα πάνω στην υπηρεσία για λεπτομέρειες.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card" onclick="location.href='party.html'">
+      <span class="badge">🎉 Πάρτυ</span>
+      <h3>Παιδικά Πάρτυ</h3>
+      <p>Θεματικά πάρτυ, παιχνίδι, μουσική και οργάνωση από την αρχή μέχρι το τέλος.</p>
+      <a class="btn" href="party.html" onclick="event.stopPropagation();">Δείτε λεπτομέρειες</a>
+    </div>
+
+    <div class="card" onclick="location.href='activities.html'">
+      <span class="badge">🎨 Δραστηριότητες</span>
+      <h3>Απογευματινές Δραστηριότητες</h3>
+      <p>Δημιουργική απασχόληση, παιχνίδι και εργαστήρια που κρατούν τα παιδιά ενεργά.</p>
+      <a class="btn" href="activities.html" onclick="event.stopPropagation();">Δείτε λεπτομέρειες</a>
+    </div>
+
+    <div class="card" onclick="location.href='study.html'">
+      <span class="badge">📚 Μελέτη</span>
+      <h3>Μελέτη μετά το σχολείο</h3>
+      <p>Καθημερινή υποστήριξη μαθημάτων με πρόγραμμα, ηρεμία και καθοδήγηση.</p>
+      <a class="btn" href="study.html" onclick="event.stopPropagation();">Δείτε λεπτομέρειες</a>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2 style="margin:0 0 10px;">📞 Επικοινωνία</h2>
+    <p style="color:var(--muted);margin-top:0;">Γράψε τα σωστά στοιχεία σου εδώ.</p>
+    <p><b>Τηλέφωνο:</b> 99 999999</p>
+    <p><b>Email:</b> info@goldenmoments.cy</p>
+    <p><b>Τοποθεσία:</b> Κύπρος</p>
+  </section>
+</div>
+
+<footer>
+  <div>© 2026 Golden Moments</div>
+  <div class="small">Φτιαγμένο για GitHub Pages</div>
+</footer>
+
+</body>
+</html>
