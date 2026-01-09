@@ -4,7 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Golden Moments</title>
-  <style>
+  </style>
+    .services{
+  margin-top:18px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  padding:26px 18px;
+}
+
+.services-title{
+  text-align:center;
+  letter-spacing:2px;
+  color:#ff5a3c;
+  margin:0 0 18px;
+  font-weight:900;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+@media(max-width:920px){
+  .services-grid{grid-template-columns:1fr;}
+}
+
+.service-card{
+  text-align:center;
+  background:#fffaf2;
+  border-radius:16px;
+  padding:18px;
+  cursor:pointer;
+  transition:.18s;
+  border:1px solid rgba(0,0,0,.05);
+}
+
+.service-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 35px rgba(0,0,0,.10);
+}
+
+.service-icon{
+  width:70px;
+  height:70px;
+  margin-bottom:10px;
+}
+
+.service-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 14px;
+  border-radius:12px;
+  border:2px solid #ff5a3c;
+  color:#ff5a3c;
+  font-weight:900;
+  text-decoration:none;
+  transition:.18s;
+}
+
+.service-btn:hover{
+  background:#ff5a3c;
+  color:#fff;
+}
     :root{
       --gold:#f4b400; --gold-dark:#d79c00; --bg:#fffaf2; --text:#2b2b2b;
       --card:#ffffff; --muted:#666; --shadow:0 10px 25px rgba(0,0,0,.08);
@@ -78,7 +141,49 @@
     </div>
 
     <div class="card" onclick="location.href='study.html'">
-      <span class="badge">📚 Μελέτη</span>
+      <spa<div class="container">
+  <div class="hero">
+    <h2 style="margin:0 0 6px;">Οι Υπηρεσίες μας</h2>
+    <p>Πάτα πάνω στην υπηρεσία για λεπτομέρειες.</p>
+  </div>
+
+  <div id="services" class="services">
+  <h2 class="services-title">ΥΠΗΡΕΣΙΕΣ</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card" onclick="location.href='party.html'">
+      <img class="service-icon" src="party.png" alt="Πάρτυ">
+      <h3>Παιδικά Πάρτυ</h3>
+      <p>Θεματικά πάρτυ, παιχνίδι, μουσική και οργάνωση από την αρχή μέχρι το τέλος.</p>
+      <a class="service-btn" href="party.html" onclick="event.stopPropagation()">Δείτε λεπτομέρειες</a>
+    </div>
+
+    <div class="service-card" onclick="location.href='activities.html'">
+      <img class="service-icon" src="activities.png" alt="Δραστηριότητες">
+      <h3>Απογευματινές Δραστηριότητες</h3>
+      <p>Δημιουργική απασχόληση και εργαστήρια που κρατούν τα παιδιά ενεργά.</p>
+      <a class="service-btn" href="activities.html" onclick="event.stopPropagation()">Δείτε λεπτομέρειες</a>
+    </div>
+
+    <div class="service-card" onclick="location.href='study.html'">
+      <img class="service-icon" src="study.png" alt="Μελέτη">
+      <h3>Μελέτη μετά το σχολείο</h3>
+      <p>Καθημερινή υποστήριξη μαθημάτων με πρόγραμμα, ηρεμία και καθοδήγηση.</p>
+      <a class="service-btn" href="study.html" onclick="event.stopPropagation()">Δείτε λεπτομέρειες</a>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="card" onclick="location.href='activities.html'">
+      <span class="badge">🎨 Δραστηριότητες</span>
+      <h3>Απογευματινές Δραστηριότητες</h3>
+      <p>Δημιουργική απασχόληση, παιχνίδι και εργαστήρια που κρατούν τα παιδιά ενεργά.</p>
+      <a class="btn" href="activities.html" onclick="event.stopPropagation();">Δείτε λεπτομέρειες</a>
+    </div>
+n class="badge">📚 Μελέτη</span>
       <h3>Μελέτη μετά το σχολείο</h3>
       <p>Καθημερινή υποστήριξη μαθημάτων με πρόγραμμα, ηρεμία και καθοδήγηση.</p>
       <a class="btn" href="study.html" onclick="event.stopPropagation();">Δείτε λεπτομέρειες</a>
