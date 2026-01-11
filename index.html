@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Golden Moments</title>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="logo.png" alt="Golden Moments Logo" class="logo">
+
+    <div class="header-text">
+      <h1>Golden Moments</h1>
+      <p>Λέσχη Παιδιών</p>
+    </div>
+  </div>
+</header>
   <style>
 
 :root{
@@ -71,6 +77,36 @@
 .service-btn:hover{
   background:#ff5a3c;
   color:#fff;
+}
+.site-header{
+  background: linear-gradient(135deg, var(--gold), #ffd56a);
+  padding: 30px 16px;
+  color: #fff;
+}
+
+.header-inner{
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+}
+
+.logo{
+  width: 80px;
+  height: auto;
+}
+
+.header-text h1{
+  margin: 0;
+  font-size: 38px;
+}
+
+.header-text p{
+  margin: 4px 0 0;
+  font-size: 16px;
+  opacity: 0.95;
 }
 
 </style>
